@@ -1,15 +1,19 @@
 package com.github.yohanaff.iphone.internet;
 
-public class Navegador {
-    public void exibirPagina() {
-        System.out.println("Exibindo página...");
+public abstract class Navegador {
+    private String url;
+
+    protected Navegador(String url) {
+        this.url = url;
     }
 
-    public void adicionarNovaAba() {
-        System.out.println("Nova aba adicionada.");
-    }
+    public abstract void exibirPagina();
 
-    public void atualizarPagina() {
-        System.out.println("Página atualizada.");
+    public abstract void adicionarNovaAba();
+
+    public abstract void atualizarPagina();
+
+    protected void validarConexaoInternet() {
+        System.out.println("Validando se está conectado à internet...");
     }
 }

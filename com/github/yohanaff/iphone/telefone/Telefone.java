@@ -1,6 +1,12 @@
 package com.github.yohanaff.iphone.telefone;
 
 public class Telefone {
+
+    public Telefone(String numero) {
+        this.numero = numero;
+    }
+
+    private String numero;
     public void ligar() {
         System.out.println("Ligando...");
     }
